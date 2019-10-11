@@ -9,20 +9,15 @@ export default class Main extends Component {
 	sendData:false,
 	albumNumbers:[],
 	albums:[],
-	empty:false
+	issue:''
 
   };
   saveDatabaseUrl = databaseUrl => {
     this.setState({ url: databaseUrl });
 
   };
-  showPopup = (empty,arr,albums) => {
-	  if(empty===true){
-		this.setState({ hidden: false,empty:true});
-	  }
-	  else{
-		this.setState({ hidden: false,albumNumbers:arr,albums:albums, empty:false });
-	  }
+  showPopup = (issue,arr,albums) => {
+		this.setState({ hidden: false,albumNumbers:arr,albums:albums, issue:issue});
   };
   hidePopup = ()=>{
 	  this.setState({hidden:true})
@@ -34,7 +29,7 @@ export default class Main extends Component {
   render() {
     return (
       <>
-        <Popup hidden={this.state.hidden} arr={this.state.albumNumbers} albums={this.state.albums} hidePopup={this.hidePopup} empty={this.state.empty}>
+        <Popup hidden={this.state.hidden} arr={this.state.albumNumbers} albums={this.state.albums} hidePopup={this.hidePopup} issue={this.state.issue}>
 		</Popup>
         <Search
           databaseUrl={this.state.url}
@@ -47,6 +42,7 @@ export default class Main extends Component {
         <Database
           saveDatabaseUrl={this.saveDatabaseUrl}
 		  choose={this.state.chooseData}
+		  showPopup={this.showPopup}
 		  ChooseNothing={this.ChooseNothing}
 		  ChooseAll={this.chooseAll}
 		  sendData={this.state.sendData}

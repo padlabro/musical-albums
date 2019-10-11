@@ -6,25 +6,25 @@ export default class Base extends Component {
   state = {
     albums: [],
     chosenAlbumsNumber: [],
-    idValue: "",
+    idValue: '',
     urlValue: "http://localhost:3004/albums",
     urlState: "empty",
-    id: "",
-	error: false,
-	choose:false,
-	sendData:true,
-	spinner:false
+    id: '',
+    error: false,
+    choose: false,
+    sendData: true,
+    spinner: false
   };
   Service = new Service();
 
-  componentDidUpdate = ()=>{
-	  if ((this.props.sendData)&&(this.state.sendData)&&((!this.state.spinner))){
-		  this.getData()
-	  }
-  }
+  componentDidUpdate = () => {
+    if (this.props.sendData && this.state.sendData && !this.state.spinner) {
+      this.getData();
+    }
+  };
   getData = async () => {
     try {
-	this.setState({spinner:true})
+      this.setState({ spinner: true });
       let responce = await this.Service.getResourceBase(this.state.urlState);
       this.updateAlbums(responce);
     } catch (err) {
@@ -33,7 +33,7 @@ export default class Base extends Component {
   };
 
   updateAlbums = responce => {
-    this.setState({ albums: false});
+    this.setState({ albums: false });
     let arr = [];
     responce.forEach(item => {
       arr.push({
@@ -42,11 +42,11 @@ export default class Base extends Component {
         date: item.date,
         id: item.id
       });
-	});
-	if(this.props.sendData){
-		this.setState({ albums: arr, error: false,sendData:false});
-	}
-	this.setState({ albums: arr, error: false,spinner:false});
+    });
+    if (this.props.sendData) {
+      this.setState({ albums: arr, error: false, sendData: false });
+    }
+    this.setState({ albums: arr, error: false, spinner: false });
   };
 
   onError = err => {
@@ -60,87 +60,106 @@ export default class Base extends Component {
         chosenAlbumsNumber: [...prevState.chosenAlbumsNumber, x]
       }));
     } else {
-		console.log('zashel')
       let arr = this.state.chosenAlbumsNumber;
       for (let i = 0; i < arr.length; i++) {
-		console.log(arr[i],event.target.value);
-		  // eslint-disable-next-line
+        // eslint-disable-next-line
         if (arr[i] == event.target.value) {
-			console.log('yaudalyau')
           arr.splice(i, 1);
           break;
         }
       }
       this.setState({ chosenAlbumsNumber: arr });
-	}
-	console.log(this.state.chosenAlbumsNumber.length)
+    }
   };
   deleteData = async event => {
-    this.setState({ chosenAlbumsNumber: [],	choose:false,spinner:true });
-    event.preventDefault();
-	let arr = [];
-	console.log(this.state.chosenAlbumsNumber.length)
-    for (let i = 0; i < this.state.chosenAlbumsNumber.length; i++) {
-      arr.push(this.state.albums[this.state.chosenAlbumsNumber[i]].id);
-    }
-    await this.Service.deleteData(arr, this.state.urlState);
-    this.setState({ albums: [], }, () => {
-      this.getData();
-    });
+	  if(this.state.chosenAlbumsNumber.length>0){
+		this.setState({ chosenAlbumsNumber: [], choose: false, spinner: true });
+		event.preventDefault();
+		let arr = [];
+		for (let i = 0; i < this.state.chosenAlbumsNumber.length; i++) {
+		  arr.push(this.state.albums[this.state.chosenAlbumsNumber[i]].id);
+		}
+		await this.Service.deleteData(arr, this.state.urlState);
+		this.setState({ albums: [] }, () => {
+		  this.getData();
+		});
+	  }else{
+		  this.props.showPopup('emptyCheckbox')
+	  }
   };
   saveUrl = event => {
     event.preventDefault();
-    this.setState(
-      {
-        urlState: this.state.urlValue,
-        urlValue: "",
-        error: false,
-        albums: false
-      },
-      () => {
-        this.getData();
-      }
-	);
-    this.props.saveDatabaseUrl(this.state.urlValue);
+    if (this.state.urlValue) {
+      this.setState(
+        {
+          urlState: this.state.urlValue,
+          urlValue: "",
+          error: false,
+          albums: false
+        },
+        () => {
+          this.getData();
+        }
+      );
+      this.props.saveDatabaseUrl(this.state.urlValue);
+    } else {
+      this.props.showPopup("emptyUrl");
+    }
   };
   changeUrl = event => {
     this.setState({ urlValue: event.target.value });
   };
   deleteById = async event => {
-    event.preventDefault();
-    await this.Service.deleteById(this.state.id, this.state.urlState);
-    this.setState({ albums: false, id: "" }, () => {
-      this.getData();
-    });
+	event.preventDefault();
+    if (this.state.id) {
+      await this.Service.deleteById(this.state.id, this.state.urlState);
+      this.setState({ albums: false, id: "" }, () => {
+        this.getData();
+      });
+    } else {
+      this.props.showPopup("emptyId");
+    }
   };
   addById = async event => {
-    event.preventDefault();
-    await this.Service.postResourceById(this.state.id, this.state.urlState);
-    this.setState({ albums: false, id: "" }, () => {
-      this.getData();
-    });
+	event.preventDefault();
+    if (this.state.id) {
+      await this.Service.postResourceById(this.state.id, this.state.urlState);
+      this.setState({ albums: false, id: "" }, () => {
+        this.getData();
+      });
+    } else {
+      this.props.showPopup("emptyId");
+    }
   };
   changeId = event => {
     this.setState({ id: event.target.value });
   };
-  chooseAll =async () => {
-	let albums = this.state.albums
-	let arr = []
-	for(let i=0;i<albums.length;i++){
-		arr.push(i)
-	}
-	await this.setState({ choose: true,albums:false,chosenAlbumsNumber:arr });
-	this.setState({albums:albums})
+  chooseAll = async () => {
+    let albums = this.state.albums;
+    let arr = [];
+    for (let i = 0; i < albums.length; i++) {
+      arr.push(i);
+    }
+    await this.setState({
+      choose: true,
+      albums: false,
+      chosenAlbumsNumber: arr
+    });
+    this.setState({ albums: albums });
   };
-  chooseNothing =async () => {
-	let albums = this.state.albums
-	await this.setState({ choose: false,albums:false,chosenAlbumsNumber:[] });
-	this.setState({albums:albums})
+  chooseNothing = async () => {
+    let albums = this.state.albums;
+    await this.setState({
+      choose: false,
+      albums: false,
+      chosenAlbumsNumber: []
+    });
+    this.setState({ albums: albums });
   };
   render() {
     return (
       <DatabaseDisplay
-	  spinner={this.state.spinner}
+        spinner={this.state.spinner}
         id={this.state.id}
         urlValue={this.state.urlValue}
         saveUrl={this.saveUrl}
@@ -153,11 +172,11 @@ export default class Base extends Component {
         changeId={this.changeId}
         addById={this.addById}
         deleteById={this.deleteById}
-		error={this.state.error}
-		chooseAll={this.chooseAll}
-		chooseNothing={this.chooseNothing}
-		choose={this.state.choose}
-		sendData={this.props.sendData}
+        error={this.state.error}
+        chooseAll={this.chooseAll}
+        chooseNothing={this.chooseNothing}
+        choose={this.state.choose}
+        sendData={this.props.sendData}
       ></DatabaseDisplay>
     );
   }

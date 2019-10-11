@@ -50,21 +50,28 @@ color:white;
 font-size:24pt;
 `;
 export default class Popup extends Component {
-  itemsRender = (albums, arr,empty) => {
-	  if (empty){
-		  return <Span>Please enter album name in input</Span>
-	  }else{
-		const AlbumsArray = arr.map((item, i) => (
+  itemsRender = (albums, arr,issue) => {
+	let item;
+	  switch (issue){
+		  case 'reAdd':item = arr.map((item, i) => (
 			<div>
 			  Album№{Number(item)+1} Title:{albums[i].title} is already in base
 			</div>
 		  ));
-		  return AlbumsArray;
+		  break
+		  case'inputAlbumName':item = <Span>Please enter album name in input</Span>
+		  break
+		  case'emptyCheckbox':item = <Span>You must select at least one album</Span>
+		  break
+		  case'emptyUrl':item = <Span>Please enter DATABASE URL addres in input and Save it</Span>
+		  break
+		  default:item = <Span>Please enter album ID in input</Span>
 	  }
+	  return item;
   };
 
   render() {
-    const items = this.itemsRender(this.props.albums, this.props.arr,this.props.empty);
+    const items = this.itemsRender(this.props.albums, this.props.arr,this.props.issue);
     return (
       <>
         <Wrapper kek={this.props.hidden}>
