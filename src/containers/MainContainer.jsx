@@ -10,7 +10,7 @@ export default class Main extends Component {
   };
   saveDatabaseUrl = databaseUrl => {
     this.setState({ url: databaseUrl });
-    console.log(databaseUrl);
+
   };
   howPopup = () => {
     this.setState({ hidden: false });

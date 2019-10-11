@@ -19,7 +19,6 @@ export default class Base extends Component {
 
   componentDidUpdate = ()=>{
 	  if ((this.props.sendData)&&(this.state.sendData)&&((!this.state.spinner))){
-		  console.log('times')
 		  this.getData()
 	  }
   }
@@ -78,8 +77,7 @@ export default class Base extends Component {
     for (let i = 0; i < this.state.chosenAlbumsNumber.length; i++) {
       arr.push(this.state.albums[this.state.chosenAlbumsNumber[i]].id);
     }
-    let res = await this.Service.deleteData(arr, this.state.urlState);
-    console.log(res, "delete??");
+    await this.Service.deleteData(arr, this.state.urlState);
     this.setState({ albums: [] }, () => {
       this.getData();
     });
@@ -134,7 +132,6 @@ export default class Base extends Component {
 	this.setState({albums:albums})
   };
   render() {
-    console.log("render");
     return (
       <DatabaseDisplay
 	  spinner={this.state.spinner}

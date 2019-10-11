@@ -16,7 +16,6 @@ export default class Servise {
       let responce = await fetch(`${url}`);
       return responce.json();
     } catch (err) {
-      console.log(err);
     }
   };
 
@@ -42,10 +41,8 @@ export default class Servise {
         let yo = await responce.json();
         await this.postResourceItem(yo, url);
       } else {
-        console.log(responce.status, "durak blyat");
       }
     } catch (err) {
-      console.log(err);
     }
   };
   postResourceItem = async (item, url) => {
