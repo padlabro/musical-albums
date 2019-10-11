@@ -9,7 +9,8 @@ export default class Search extends Component {
     chosenAlbumsNumber: [],
     urlDatabase: "",
     error: false,
-    choose: false
+	choose: false,
+	spinner:false
   };
 
   Service = new Service();
@@ -19,7 +20,7 @@ export default class Search extends Component {
   };
 
   searchAlbums = async event => {
-    event.preventDefault();
+	event.preventDefault();
     if (!this.state.albumName) {
       this.props.showPopup(true);
     } else {
@@ -34,6 +35,7 @@ export default class Search extends Component {
   };
 
   sendAlbums = async event => {
+	this.setState({spinner:true})
     event.preventDefault();
     let albums = this.state.albums;
     let arr = [];
@@ -45,14 +47,15 @@ export default class Search extends Component {
       this.state.urlDatabase,
       this.state.chosenAlbumsNumber
     );
-    console.log(res);
     if (res.length === 0) {
-      await this.setState({ albums: false, choose: false });
+      await this.setState({ albums: false, choose: false,spinner:false });
       this.props.sendAlbumsToDatabase();
       this.setState({ chosenAlbumsNumber: [], albums: albums });
     } else {
-      this.props.showPopup(false, res, this.state.albums);
-    }
+		this.props.sendAlbumsToDatabase();
+	  this.props.showPopup(false, res, this.state.albums,);
+	  this.setState({spinner:false});
+	}
   };
   choseAlbum = event => {
     if (event.target.checked) {
@@ -105,6 +108,7 @@ export default class Search extends Component {
   render() {
     return (
       <SearchDisplay
+	  spinner={this.state.spinner}
         albums={this.state.albums}
         searchAlbums={this.searchAlbums}
         inputAlbum={this.inputAlbum}

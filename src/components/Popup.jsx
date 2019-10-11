@@ -53,13 +53,14 @@ export default class Popup extends Component {
   itemsRender = (albums, arr,empty) => {
 	  if (empty){
 		  return <Span>Please enter album name in input</Span>
+	  }else{
+		const AlbumsArray = arr.map((item, i) => (
+			<div>
+			  Album№{Number(item)+1} Title:{albums[i].title} is already in base
+			</div>
+		  ));
+		  return AlbumsArray;
 	  }
-    const AlbumsArray = arr.map((item, i) => (
-      <span>
-        Album№{Number(item)+1} Title:{albums[i].title} is already in base
-      </span>
-    ));
-    return AlbumsArray;
   };
 
   render() {

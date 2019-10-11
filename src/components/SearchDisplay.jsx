@@ -34,6 +34,7 @@ export default class SearchResult extends Component {
           <Button onClick={this.props.searchAlbums} text={"Search"}></Button>
         </Form>
         <AlbumList
+			  spinner={this.props.spinner}
 			choose={this.props.choose}
           albums={this.props.albums}
           choseAlbum={this.props.choseAlbum}

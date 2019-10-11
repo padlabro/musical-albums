@@ -76,7 +76,7 @@ export default class Base extends Component {
 	console.log(this.state.chosenAlbumsNumber.length)
   };
   deleteData = async event => {
-    this.setState({ chosenAlbumsNumber: [],	choose:false });
+    this.setState({ chosenAlbumsNumber: [],	choose:false,spinner:true });
     event.preventDefault();
 	let arr = [];
 	console.log(this.state.chosenAlbumsNumber.length)
@@ -84,7 +84,7 @@ export default class Base extends Component {
       arr.push(this.state.albums[this.state.chosenAlbumsNumber[i]].id);
     }
     await this.Service.deleteData(arr, this.state.urlState);
-    this.setState({ albums: [] }, () => {
+    this.setState({ albums: [], }, () => {
       this.getData();
     });
   };

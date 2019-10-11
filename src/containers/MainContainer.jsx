@@ -20,7 +20,9 @@ export default class Main extends Component {
 	  if(empty===true){
 		this.setState({ hidden: false,empty:true});
 	  }
-    this.setState({ hidden: false,albumNumbers:arr,albums:albums });
+	  else{
+		this.setState({ hidden: false,albumNumbers:arr,albums:albums, empty:false });
+	  }
   };
   hidePopup = ()=>{
 	  this.setState({hidden:true})
