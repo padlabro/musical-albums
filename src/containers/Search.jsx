@@ -115,6 +115,7 @@ export default class Search extends Component {
   }
 
   render() {
+	console.log('RENDER___SEARCHH')
     return (
       <SearchDisplay
         spinner={this.state.spinner}

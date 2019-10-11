@@ -39,7 +39,7 @@ const Buttton = styled.button`
 		: ""};
 		${props =>
 			props.children === "Close"
-			? "position:absolute;width:205px;background: black;padding: 10px;left:30px;bottom:-39px;color:white;border-color:white"
+			? "position:absolute;width:205px;background: black;padding: 10px;left:40px;bottom:-39px;color:white;border-color:white"
 			: ""};
 		
 	`;

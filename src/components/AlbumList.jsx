@@ -5,7 +5,7 @@ import Spinner from './spinner/Spinner.svg'
 
 const Form = styled.form`
   padding: 20px 0px;
-  overflow-y: scroll;
+  overflow-y: auto;
   height:525px;
   &::-webkit-scrollbar-button {
 	background-image:url('');

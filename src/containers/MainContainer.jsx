@@ -27,6 +27,7 @@ export default class Main extends Component {
 	  this.setState({sendData:false})
   }
   render() {
+	console.log('RENDER___MAINCOMPONENT')
     return (
       <>
         <Popup hidden={this.state.hidden} arr={this.state.albumNumbers} albums={this.state.albums} hidePopup={this.hidePopup} issue={this.state.issue}>

@@ -4,9 +4,9 @@ import Button from "./Button";
 const Wrapper = styled.div`
   color: white;
   position: absolute;
-  top: ${props => (props.kek ? "-240px" : "100px")};
-  width: 300px;
-  height: 200px;
+  top: ${props => (props.kek ? "-240px" : "88px")};
+  width: 316px;
+  height: 183px;
   border: 1px solid white;
   left: 43%;
   background-color: black;
@@ -19,9 +19,11 @@ const AlmubList = styled.div`
   position: relative;
 `;
 const Div = styled.div`
-width: 300px;
-  height: 200px;
-overflow-y: scroll;
+box-sizing:border-box;
+padding:15px
+width: 316px;
+height: 183px;
+overflow-y: auto;
 &::-webkit-scrollbar-button {
     background-image: url("");
     background-repeat: no-repeat;
