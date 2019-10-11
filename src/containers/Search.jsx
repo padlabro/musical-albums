@@ -58,10 +58,12 @@ export default class Search extends Component {
         this.setState({ spinner: false });
       }
     } else {
+		console.log(this.state.urlDatabase);
       if (this.state.urlDatabase) {
         this.props.showPopup("emptyCheckbox");
+	  }else{
+		this.props.showPopup("emptyUrl");
 	  }
-	  this.props.showPopup("emptyUrl");
     }
   };
   choseAlbum = event => {

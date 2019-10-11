@@ -1,3 +1,975 @@
 {
-  "albums": []
+  "albums": [
+    {
+      "id": "553d4b16-4313-4574-a840-e22c3fef67f0",
+      "score": 100,
+      "count": 1,
+      "title": "Zzz!",
+      "status": "Official",
+      "text-representation": {
+        "language": "lav",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Aparāts",
+          "artist": {
+            "id": "e753df67-c579-429c-830a-f3f7e4039854",
+            "name": "Aparāts",
+            "sort-name": "Aparāts"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "856f2d66-1703-3734-8d29-299a7ff5ccb6",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Zzz!",
+        "primary-type": "Album"
+      },
+      "date": "2002-12-13",
+      "country": "LV",
+      "release-events": [
+        {
+          "date": "2002-12-13",
+          "area": {
+            "id": "66eb3e73-d69e-3581-9a23-a73b4c64c8dd",
+            "name": "Latvia",
+            "sort-name": "Latvia",
+            "iso-3166-1-codes": [
+              "LV"
+            ]
+          }
+        }
+      ],
+      "barcode": "4740196388228",
+      "label-info": [
+        {
+          "catalog-number": "BRG CD 130",
+          "label": {
+            "id": "5bb7f67d-7a65-483d-86e9-91148a2b482a",
+            "name": "Baltic Records Group"
+          }
+        }
+      ],
+      "track-count": 13,
+      "media": [
+        {
+          "format": "CD",
+          "disc-count": 1,
+          "track-count": 13
+        }
+      ]
+    },
+    {
+      "id": "52dfc901-9ff2-48dc-a666-bc918b6ed008",
+      "score": 100,
+      "count": 1,
+      "title": "ZZZ",
+      "status": "Official",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Andrew Deutsch",
+          "artist": {
+            "id": "afe5e9cb-b2d4-4922-8167-41e0ca2b46d8",
+            "name": "Andrew Deutsch",
+            "sort-name": "Deutsch, Andrew"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "3e549367-cb3c-41f6-aa7c-33adb6aad45f",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "ZZZ",
+        "primary-type": "Album"
+      },
+      "date": "2002",
+      "country": "US",
+      "release-events": [
+        {
+          "date": "2002",
+          "area": {
+            "id": "489ce91b-6658-3307-9877-795b68554c98",
+            "name": "United States",
+            "sort-name": "United States",
+            "iso-3166-1-codes": [
+              "US"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "label": {
+            "id": "8c6dd40c-7435-4d90-919e-62730104e22d",
+            "name": "Magic If"
+          }
+        }
+      ],
+      "track-count": 3,
+      "media": [
+        {
+          "format": "CD",
+          "disc-count": 1,
+          "track-count": 3
+        }
+      ]
+    },
+    {
+      "id": "1e049219-c3a3-4d44-834f-387f715cef91",
+      "score": 100,
+      "count": 1,
+      "title": "ZZZ",
+      "status": "Official",
+      "packaging": "Jewel Case",
+      "text-representation": {
+        "language": "kor",
+        "script": "Hang"
+      },
+      "artist-credit": [
+        {
+          "name": "Zion.T",
+          "artist": {
+            "id": "86258e71-2bf2-43ac-a3b3-c1b94bf2c3d4",
+            "name": "Zion.T",
+            "sort-name": "Zion.T"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "69316ec4-a98f-439c-956f-07c9cba36417",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "ZZZ",
+        "primary-type": "EP"
+      },
+      "date": "2018-10-15",
+      "country": "KR",
+      "release-events": [
+        {
+          "date": "2018-10-15",
+          "area": {
+            "id": "b9f7d640-46e8-313e-b158-ded6d18593b3",
+            "name": "South Korea",
+            "sort-name": "South Korea",
+            "iso-3166-1-codes": [
+              "KR"
+            ]
+          }
+        }
+      ],
+      "barcode": "8809269509376",
+      "label-info": [
+        {
+          "label": {
+            "id": "2eb81345-48aa-4f06-a634-ad287ee16fab",
+            "name": "THE BLACK LABEL"
+          }
+        }
+      ],
+      "track-count": 8,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 8
+        }
+      ]
+    },
+    {
+      "id": "3f8a61bc-5c58-4451-9bae-e300a301a2ae",
+      "score": 100,
+      "count": 1,
+      "title": "ZZZ",
+      "status": "Official",
+      "packaging": "Digibook",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Planet Giza",
+          "artist": {
+            "id": "687b1070-874d-4c2a-b291-275151401d09",
+            "name": "Planet Giza",
+            "sort-name": "Planet Giza"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "2f326d5b-7a76-4d76-9f53-0e5e90016fe2",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "ZZZ",
+        "primary-type": "EP"
+      },
+      "date": "2018-05-30",
+      "country": "CA",
+      "release-events": [
+        {
+          "date": "2018-05-30",
+          "area": {
+            "id": "71bbafaa-e825-3e15-8ca9-017dcad1748b",
+            "name": "Canada",
+            "sort-name": "Canada",
+            "iso-3166-1-codes": [
+              "CA"
+            ]
+          }
+        }
+      ],
+      "track-count": 3,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 3
+        }
+      ]
+    },
+    {
+      "id": "418d22b5-20d3-4336-aaf2-537a5ec39354",
+      "score": 100,
+      "count": 1,
+      "title": "ZZZ",
+      "status": "Official",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Zion.T",
+          "artist": {
+            "id": "86258e71-2bf2-43ac-a3b3-c1b94bf2c3d4",
+            "name": "Zion.T",
+            "sort-name": "Zion.T"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "69316ec4-a98f-439c-956f-07c9cba36417",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "ZZZ",
+        "primary-type": "EP"
+      },
+      "date": "2018-10-15",
+      "country": "US",
+      "release-events": [
+        {
+          "date": "2018-10-15",
+          "area": {
+            "id": "489ce91b-6658-3307-9877-795b68554c98",
+            "name": "United States",
+            "sort-name": "United States",
+            "iso-3166-1-codes": [
+              "US"
+            ]
+          }
+        }
+      ],
+      "barcode": "",
+      "label-info": [
+        {
+          "label": {
+            "id": "2eb81345-48aa-4f06-a634-ad287ee16fab",
+            "name": "THE BLACK LABEL"
+          }
+        }
+      ],
+      "track-count": 7,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 7
+        }
+      ]
+    },
+    {
+      "id": "b79b9179-94d1-446a-8882-53d7195c468c",
+      "score": 100,
+      "count": 1,
+      "title": "zZz",
+      "artist-credit": [
+        {
+          "name": "DROELOE",
+          "artist": {
+            "id": "378d092c-e78d-498b-a303-e6b657ab5159",
+            "name": "DROELOE",
+            "sort-name": "DROELOE"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "f9ded305-7323-4641-a818-e60bbf78458c",
+        "type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+        "title": "zZz",
+        "primary-type": "Single"
+      },
+      "date": "2016-03-19",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2016-03-19",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "label": {
+            "id": "79a2921d-8f4a-4a6a-b0b3-7b23259fcc5f",
+            "name": "bitbird"
+          }
+        }
+      ],
+      "track-count": 1,
+      "media": [
+        {
+          "disc-count": 0,
+          "track-count": 1
+        }
+      ]
+    },
+    {
+      "id": "dc1cfa38-2730-49f2-8a10-f771662a4ef3",
+      "score": 100,
+      "count": 1,
+      "title": "Zzz",
+      "status": "Pseudo-Release",
+      "text-representation": {
+        "language": "jpn",
+        "script": "Jpan"
+      },
+      "artist-credit": [
+        {
+          "name": "佐咲紗花",
+          "artist": {
+            "id": "da331d79-0068-4fa9-aba2-8dfb9e47a2de",
+            "name": "佐咲紗花",
+            "sort-name": "Sasaki, Sayaka"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "3763c23b-bf43-45b9-9166-ae7982e42658",
+        "type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+        "title": "Zzz",
+        "primary-type": "Single"
+      },
+      "date": "2011-05-25",
+      "country": "JP",
+      "release-events": [
+        {
+          "date": "2011-05-25",
+          "area": {
+            "id": "2db42837-c832-3c27-b4a3-08198f75693c",
+            "name": "Japan",
+            "sort-name": "Japan",
+            "iso-3166-1-codes": [
+              "JP"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "catalog-number": "LACM-4809"
+        }
+      ],
+      "track-count": 6,
+      "media": [
+        {
+          "format": "CD",
+          "disc-count": 0,
+          "track-count": 6
+        }
+      ]
+    },
+    {
+      "id": "cfd77e5c-3ea4-4e94-b8f4-b5d4691708ec",
+      "score": 100,
+      "count": 1,
+      "title": "Zzz",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "J. Mono",
+          "artist": {
+            "id": "ac5d8db6-9821-48c6-bb1c-172f9d2df09f",
+            "name": "J. Mono",
+            "sort-name": "J. Mono"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "db26fc27-b0e7-4052-aabe-919f3a545f02",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "Zzz",
+        "primary-type": "EP"
+      },
+      "date": "2017-01-17",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2017-01-17",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "catalog-number": "DD003",
+          "label": {
+            "id": "c7b21649-d4d4-4e21-bdee-cd9fd3e2e70c",
+            "name": "Dalmata Daniel"
+          }
+        }
+      ],
+      "track-count": 6,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 6
+        }
+      ]
+    },
+    {
+      "id": "8bf734ac-88e5-43a3-9d0d-d4d36ec47ba3",
+      "score": 100,
+      "count": 1,
+      "title": "Zzz",
+      "status": "Official",
+      "packaging": "Jewel Case",
+      "text-representation": {
+        "language": "jpn",
+        "script": "Jpan"
+      },
+      "artist-credit": [
+        {
+          "name": "佐咲紗花",
+          "artist": {
+            "id": "da331d79-0068-4fa9-aba2-8dfb9e47a2de",
+            "name": "佐咲紗花",
+            "sort-name": "Sasaki, Sayaka"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "3763c23b-bf43-45b9-9166-ae7982e42658",
+        "type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+        "title": "Zzz",
+        "primary-type": "Single"
+      },
+      "date": "2011-05-25",
+      "country": "JP",
+      "release-events": [
+        {
+          "date": "2011-05-25",
+          "area": {
+            "id": "2db42837-c832-3c27-b4a3-08198f75693c",
+            "name": "Japan",
+            "sort-name": "Japan",
+            "iso-3166-1-codes": [
+              "JP"
+            ]
+          }
+        }
+      ],
+      "barcode": "4540774408092",
+      "asin": "B004TD53U6",
+      "label-info": [
+        {
+          "catalog-number": "LACM-4809",
+          "label": {
+            "id": "51a22f67-8bbd-473e-b4af-2e60efebe150",
+            "name": "Lantis"
+          }
+        }
+      ],
+      "track-count": 6,
+      "media": [
+        {
+          "format": "CD",
+          "disc-count": 1,
+          "track-count": 6
+        }
+      ]
+    },
+    {
+      "id": "7881cd51-7f5c-473b-b547-bc6f12ee06be",
+      "score": 85,
+      "count": 1,
+      "title": "Sleep zzz...",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "jpn",
+        "script": "Jpan"
+      },
+      "artist-credit": [
+        {
+          "joinphrase": "(",
+          "name": "桐崎千棘",
+          "artist": {
+            "id": "d4a90d6b-dd08-4487-891e-70f8bc2c47f4",
+            "name": "桐崎千棘",
+            "sort-name": "Kirisaki, Chitoge",
+            "disambiguation": "ニセコイ"
+          }
+        },
+        {
+          "joinphrase": ")",
+          "name": "東山奈央",
+          "artist": {
+            "id": "73e66826-f426-4f22-aa1f-dec4b9ac8acc",
+            "name": "東山奈央",
+            "sort-name": "Toyama, Nao"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "11c793b2-ee8a-4743-8906-6115dfaf8c26",
+        "type-id": "22a628ad-c082-3c4f-b1b6-d41665107b88",
+        "title": "Sleep zzz... & NISEKOI ORIGINAL SOUNDTRACK SELECTION vol.1",
+        "primary-type": "Album",
+        "secondary-types": [
+          "Soundtrack"
+        ]
+      },
+      "date": "2015-10-21",
+      "country": "JP",
+      "release-events": [
+        {
+          "date": "2015-10-21",
+          "area": {
+            "id": "2db42837-c832-3c27-b4a3-08198f75693c",
+            "name": "Japan",
+            "sort-name": "Japan",
+            "iso-3166-1-codes": [
+              "JP"
+            ]
+          }
+        }
+      ],
+      "barcode": "4534530090331",
+      "label-info": [
+        {
+          "catalog-number": "ANXX00657B00Z",
+          "label": {
+            "id": "fa61217d-7501-4d3e-b7cd-04d9a3abe8fc",
+            "name": "Aniplex"
+          }
+        }
+      ],
+      "track-count": 1,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 1
+        }
+      ]
+    },
+    {
+      "id": "a237fd66-f7e5-46fb-9aab-4e813f5b9e76",
+      "score": 85,
+      "count": 1,
+      "title": "Zzz EP",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Sleepwell",
+          "artist": {
+            "id": "46be2cf5-d669-4c18-b656-62fb93e3190f",
+            "name": "Sleepwell",
+            "sort-name": "Sleepwell",
+            "disambiguation": "Japanese producer"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "ffb3ecb1-6432-4891-846d-bd29f8f9e17a",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "Zzz EP",
+        "primary-type": "EP"
+      },
+      "date": "2015-01-28",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2015-01-28",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "barcode": "",
+      "label-info": [
+        {
+          "catalog-number": "trekkie24",
+          "label": {
+            "id": "7b5c51f3-e840-46ab-9fa9-3147924fca70",
+            "name": "TREKKIE TRAX"
+          }
+        }
+      ],
+      "track-count": 5,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 5
+        }
+      ]
+    },
+    {
+      "id": "467ebd53-da43-3d4f-a013-70b331096064",
+      "score": 75,
+      "count": 1,
+      "title": "Sound of zZz",
+      "status": "Official",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "zZz",
+          "artist": {
+            "id": "1248f063-961c-4d66-9327-23441d66b293",
+            "name": "zZz",
+            "sort-name": "zZz",
+            "disambiguation": "Dutch dance rock band"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "357cda89-ba26-3421-95a1-0b8b712a5697",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Sound of zZz",
+        "primary-type": "Album"
+      },
+      "date": "2005-05-23",
+      "country": "NL",
+      "release-events": [
+        {
+          "date": "2005-05-23",
+          "area": {
+            "id": "ef1b7cc0-cd26-36f4-8ea0-04d9623786c7",
+            "name": "Netherlands",
+            "sort-name": "Netherlands",
+            "iso-3166-1-codes": [
+              "NL"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "catalog-number": "Excel96085",
+          "label": {
+            "id": "fc6c268e-68e6-49b5-b04a-96d5d3d9c6a0",
+            "name": "Excelsior Recordings"
+          }
+        }
+      ],
+      "track-count": 11,
+      "media": [
+        {
+          "format": "Vinyl",
+          "disc-count": 0,
+          "track-count": 11
+        }
+      ]
+    },
+    {
+      "id": "cd6e852d-0928-4fb8-bf2a-2f5db10279e3",
+      "score": 75,
+      "count": 1,
+      "title": "Catch Some Zzz's",
+      "status": "Official",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "dtownpaolo",
+          "artist": {
+            "id": "f658801b-0df6-49c2-b655-9734a3517bb3",
+            "name": "dtownpaolo",
+            "sort-name": "dtownpaolo"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "bc919c06-a693-4f49-bb5e-97aebf4b0a61",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Catch Some Zzz's",
+        "primary-type": "Album"
+      },
+      "date": "2006",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2006",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "catalog-number": "buckram005",
+          "label": {
+            "id": "683c7369-e612-418c-9104-099a87dfc490",
+            "name": "BuckramBeats"
+          }
+        }
+      ],
+      "track-count": 3,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 3
+        }
+      ]
+    },
+    {
+      "id": "4b6cad9f-1aff-4462-a4e4-b8dab3e0da4d",
+      "score": 75,
+      "count": 1,
+      "title": "Sound of zZz",
+      "status": "Official",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "zZz",
+          "artist": {
+            "id": "1248f063-961c-4d66-9327-23441d66b293",
+            "name": "zZz",
+            "sort-name": "zZz",
+            "disambiguation": "Dutch dance rock band"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "357cda89-ba26-3421-95a1-0b8b712a5697",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Sound of zZz",
+        "primary-type": "Album"
+      },
+      "date": "2005-05-23",
+      "country": "NL",
+      "release-events": [
+        {
+          "date": "2005-05-23",
+          "area": {
+            "id": "ef1b7cc0-cd26-36f4-8ea0-04d9623786c7",
+            "name": "Netherlands",
+            "sort-name": "Netherlands",
+            "iso-3166-1-codes": [
+              "NL"
+            ]
+          }
+        }
+      ],
+      "barcode": "8714374960823",
+      "asin": "B0008KLW40",
+      "label-info": [
+        {
+          "catalog-number": "Excel96082",
+          "label": {
+            "id": "fc6c268e-68e6-49b5-b04a-96d5d3d9c6a0",
+            "name": "Excelsior Recordings"
+          }
+        }
+      ],
+      "track-count": 11,
+      "media": [
+        {
+          "format": "CD",
+          "disc-count": 3,
+          "track-count": 11
+        }
+      ]
+    },
+    {
+      "id": "aa025f14-55b4-4bf8-896e-cbfaffd896bd",
+      "score": 67,
+      "count": 1,
+      "title": "Sleep zzz... (TVsize ver.)",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "jpn",
+        "script": "Jpan"
+      },
+      "artist-credit": [
+        {
+          "joinphrase": "(",
+          "name": "桐崎千棘",
+          "artist": {
+            "id": "d4a90d6b-dd08-4487-891e-70f8bc2c47f4",
+            "name": "桐崎千棘",
+            "sort-name": "Kirisaki, Chitoge",
+            "disambiguation": "ニセコイ"
+          }
+        },
+        {
+          "joinphrase": ")",
+          "name": "東山奈央",
+          "artist": {
+            "id": "73e66826-f426-4f22-aa1f-dec4b9ac8acc",
+            "name": "東山奈央",
+            "sort-name": "Toyama, Nao"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "bca70100-9708-44d0-80b2-17196719fbbb",
+        "type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+        "title": "Sleep zzz... (TVsize ver.)",
+        "primary-type": "Single"
+      },
+      "date": "2015-05-02",
+      "country": "JP",
+      "release-events": [
+        {
+          "date": "2015-05-02",
+          "area": {
+            "id": "2db42837-c832-3c27-b4a3-08198f75693c",
+            "name": "Japan",
+            "sort-name": "Japan",
+            "iso-3166-1-codes": [
+              "JP"
+            ]
+          }
+        }
+      ],
+      "barcode": "4534530085641",
+      "label-info": [
+        {
+          "catalog-number": "ANXX00602B00Z",
+          "label": {
+            "id": "fa61217d-7501-4d3e-b7cd-04d9a3abe8fc",
+            "name": "Aniplex"
+          }
+        }
+      ],
+      "track-count": 1,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 1
+        }
+      ]
+    },
+    {
+      "id": "f4d3b35b-95ff-4d32-a19f-f3b3a43b56c8",
+      "score": 46,
+      "count": 1,
+      "title": "Sleep zzz... & NISEKOI ORIGINAL SOUNDTRACK SELECTION vol.1",
+      "status": "Official",
+      "text-representation": {
+        "language": "jpn",
+        "script": "Jpan"
+      },
+      "artist-credit": [
+        {
+          "name": "Various Artists",
+          "artist": {
+            "id": "89ad4ac3-39f7-470e-963a-56509c546377",
+            "name": "Various Artists",
+            "sort-name": "Various Artists",
+            "disambiguation": "add compilations to this artist"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "11c793b2-ee8a-4743-8906-6115dfaf8c26",
+        "type-id": "22a628ad-c082-3c4f-b1b6-d41665107b88",
+        "title": "Sleep zzz... & NISEKOI ORIGINAL SOUNDTRACK SELECTION vol.1",
+        "primary-type": "Album",
+        "secondary-types": [
+          "Soundtrack"
+        ]
+      },
+      "date": "2015-07-22",
+      "country": "JP",
+      "release-events": [
+        {
+          "date": "2015-07-22",
+          "area": {
+            "id": "2db42837-c832-3c27-b4a3-08198f75693c",
+            "name": "Japan",
+            "sort-name": "Japan",
+            "iso-3166-1-codes": [
+              "JP"
+            ]
+          }
+        }
+      ],
+      "barcode": "4534530085214",
+      "asin": "B00VV2ETEE",
+      "label-info": [
+        {
+          "catalog-number": "ANZX-11164",
+          "label": {
+            "id": "fa61217d-7501-4d3e-b7cd-04d9a3abe8fc",
+            "name": "Aniplex"
+          }
+        }
+      ],
+      "track-count": 23,
+      "media": [
+        {
+          "format": "CD",
+          "disc-count": 1,
+          "track-count": 23
+        }
+      ]
+    }
+  ]
 }
