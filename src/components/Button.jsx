@@ -37,7 +37,13 @@ const Buttton = styled.button`
 		props.children === "CHOOSE ALL"
 		? "position:absolute;bottom:200px;left:-135px;width:205px;background: black;padding: 10px;transform: rotate(-90deg)"
 		: ""};
+		${props =>
+			props.children === "Close"
+			? "position:absolute;width:205px;background: black;padding: 10px;left:30px;bottom:-39px;color:white;border-color:white"
+			: ""};
+		
 	`;
+	
 
 
 export default class Button extends Component {
@@ -46,7 +52,8 @@ export default class Button extends Component {
       <Buttton
         blue={this.props.blue}
         onClick={this.props.onClick}
-        type={this.props.type}
+		type={this.props.type}
+		
       >
         {this.props.text}
       </Buttton>

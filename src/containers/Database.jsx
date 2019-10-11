@@ -60,20 +60,26 @@ export default class Base extends Component {
         chosenAlbumsNumber: [...prevState.chosenAlbumsNumber, x]
       }));
     } else {
+		console.log('zashel')
       let arr = this.state.chosenAlbumsNumber;
       for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === event.target.value) {
+		console.log(arr[i],event.target.value);
+		  // eslint-disable-next-line
+        if (arr[i] == event.target.value) {
+			console.log('yaudalyau')
           arr.splice(i, 1);
           break;
         }
       }
       this.setState({ chosenAlbumsNumber: arr });
-    }
+	}
+	console.log(this.state.chosenAlbumsNumber.length)
   };
   deleteData = async event => {
     this.setState({ chosenAlbumsNumber: [],	choose:false });
     event.preventDefault();
-    let arr = [];
+	let arr = [];
+	console.log(this.state.chosenAlbumsNumber.length)
     for (let i = 0; i < this.state.chosenAlbumsNumber.length; i++) {
       arr.push(this.state.albums[this.state.chosenAlbumsNumber[i]].id);
     }

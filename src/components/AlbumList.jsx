@@ -40,7 +40,6 @@ font-size: 23pt;
 export default class AlbumList extends Component {
   renderItems(props) {
 	if(this.props.spinner){
-		console.log('nuyatut')
 		return <img src={Spinner} alt="spinner"/>
 	}
     let albums=props;

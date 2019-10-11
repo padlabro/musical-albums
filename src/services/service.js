@@ -15,22 +15,30 @@ export default class Servise {
     try {
       let responce = await fetch(`${url}`);
       return responce.json();
-    } catch (err) {
-    }
+    } catch (err) {}
   };
 
   getResource = url => {
     return fetch(
       `https://musicbrainz.org/ws/2/release/?query=release:${url}&fmt=json`
-    ).then(res => res.ok ? res : Promise.reject(res))
+    )
+      .then(res => (res.ok ? res : Promise.reject(res)))
       .then(res => {
         return res.json();
-      }).catch(()=>{return false});
+      })
+      .catch(() => {
+        return false;
+      });
   };
-  postResourceArray = async (arr, url) => {
-    for (const item of arr) {
-      await this.postResourceItem(item, url);
+  postResourceArray = async (arr, url, numbers) => {
+    let array = [];
+    for (let i = 0; i < arr.length; i++) {
+      let kek = await this.postResourceItem(arr[i], url);
+      if (kek !== undefined) {
+        array.push(numbers[i]);
+      }
     }
+    return array;
   };
   postResourceById = async (item, url) => {
     try {
@@ -42,16 +50,18 @@ export default class Servise {
         await this.postResourceItem(yo, url);
       } else {
       }
-    } catch (err) {
-    }
+    } catch (err) {}
   };
   postResourceItem = async (item, url) => {
-    await fetch(`${url}`, {
+    let responce = await fetch(`${url}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8"
       },
       body: JSON.stringify(item)
     });
+    if (responce.status === 500) {
+      return responce.status;
+    }
   };
 }
