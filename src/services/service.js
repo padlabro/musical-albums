@@ -21,7 +21,7 @@ export default class Servise {
 
   getResource = url => {
     return fetch(
-      `http://musicbrainz.org/ws/2/release/?query=release:${url}&fmt=json`
+      `https://musicbrainz.org/ws/2/release/?query=release:${url}&fmt=json`
     ).then(res => res.ok ? res : Promise.reject(res))
       .then(res => {
         return res.json();
@@ -35,7 +35,7 @@ export default class Servise {
   postResourceById = async (item, url) => {
     try {
       let responce = await fetch(
-        `http://musicbrainz.org/ws/2/release/${item}?inc=artist-credits+labels&fmt=json`
+        `https://musicbrainz.org/ws/2/release/${item}?inc=artist-credits+labels&fmt=json`
       );
       if (responce.status === 200) {
         let yo = await responce.json();
