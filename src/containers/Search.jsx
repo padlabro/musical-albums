@@ -24,12 +24,13 @@ export default class Search extends Component {
     if (!this.state.albumName) {
       this.props.showPopup("inputAlbumName");
     } else {
+		this.setState({ spinner: true });
       let albums = await this.Service.getResource(this.state.albumName);
       if (albums) {
         this.setState({ albums: false, choose: false });
-        this.setState({ albumName: "", albums: albums.releases, error: false });
+        this.setState({ albumName: "", albums: albums.releases, error: false,spinner: false });
       } else {
-        this.setState({ error: true });
+        this.setState({ error: true,spinner: false });
       }
     }
   };
