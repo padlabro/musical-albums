@@ -157,7 +157,6 @@ export default class Base extends Component {
     this.setState({ albums: albums });
   };
   render() {
-	  console.log('RENDER___BASE')
     return (
       <DatabaseDisplay
         spinner={this.state.spinner}

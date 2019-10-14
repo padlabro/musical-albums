@@ -24,13 +24,18 @@ export default class Search extends Component {
     if (!this.state.albumName) {
       this.props.showPopup("inputAlbumName");
     } else {
-		this.setState({ spinner: true });
+      this.setState({ spinner: true });
       let albums = await this.Service.getResource(this.state.albumName);
       if (albums) {
         this.setState({ albums: false, choose: false });
-        this.setState({ albumName: "", albums: albums.releases, error: false,spinner: false });
+        this.setState({
+          albumName: "",
+          albums: albums.releases,
+          error: false,
+          spinner: false
+        });
       } else {
-        this.setState({ error: true,spinner: false });
+        this.setState({ error: true, spinner: false });
       }
     }
   };
@@ -49,22 +54,27 @@ export default class Search extends Component {
         this.state.urlDatabase,
         this.state.chosenAlbumsNumber
       );
-      if (res.length === 0) {
-        await this.setState({ albums: false, choose: false, spinner: false });
-        this.props.sendAlbumsToDatabase();
-        this.setState({ chosenAlbumsNumber: [], albums: albums });
-      } else {
-        this.props.sendAlbumsToDatabase();
-        this.props.showPopup("reAdd", res, this.state.albums);
+      console.log(res);
+      if (!res) {
         this.setState({ spinner: false });
+      } else {
+        if (res.length === 0) {
+          await this.setState({ albums: false, choose: false, spinner: false });
+          this.props.sendAlbumsToDatabase();
+          this.setState({ chosenAlbumsNumber: [], albums: albums });
+        } else {
+          this.props.sendAlbumsToDatabase();
+          this.props.showPopup("reAdd", res, this.state.albums);
+          this.setState({ spinner: false });
+        }
       }
     } else {
-		console.log(this.state.urlDatabase);
+      console.log(this.state.urlDatabase);
       if (this.state.urlDatabase) {
         this.props.showPopup("emptyCheckbox");
-	  }else{
-		this.props.showPopup("emptyUrl");
-	  }
+      } else {
+        this.props.showPopup("emptyUrl");
+      }
     }
   };
   choseAlbum = event => {
@@ -116,7 +126,6 @@ export default class Search extends Component {
   }
 
   render() {
-	console.log('RENDER___SEARCHH')
     return (
       <SearchDisplay
         spinner={this.state.spinner}

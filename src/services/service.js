@@ -5,10 +5,11 @@ export default class Servise {
     }
   };
 
-  deleteById = async (id, url) => {
+  deleteById = async (id,url) => {
     await fetch(`${url}/${id}`, {
       method: "DELETE"
-    });
+	});
+	return 'ready'
   };
 
   getResourceBase = async url => {
@@ -33,35 +34,39 @@ export default class Servise {
   postResourceArray = async (arr, url, numbers) => {
     let array = [];
     for (let i = 0; i < arr.length; i++) {
-      let kek = await this.postResourceItem(arr[i], url);
-      if (kek !== undefined) {
+	  let res = await this.postResourceItem(arr[i], url);
+	  console.log(res);
+      if (res !== false) {
         array.push(numbers[i]);
-      }
+	  }
+	  else return false
     }
     return array;
   };
   postResourceById = async (item, url) => {
-    try {
       let responce = await fetch(
         `https://musicbrainz.org/ws/2/release/${item}?inc=artist-credits+labels&fmt=json`
       );
       if (responce.status === 200) {
-        let yo = await responce.json();
-        await this.postResourceItem(yo, url);
-      } else {
+        let res = await responce.json();
+        await this.postResourceItem(res, url);
       }
-    } catch (err) {}
   };
   postResourceItem = async (item, url) => {
-    let responce = await fetch(`${url}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8"
-      },
-      body: JSON.stringify(item)
-    });
-    if (responce.status === 500) {
-      return responce.status;
-    }
+	  try{
+		let responce = await fetch(`${url}`, {
+			method: "POST",
+			headers: {
+			  "Content-Type": "application/json;charset=utf-8"
+			},
+			body: JSON.stringify(item)
+		  });
+		  console.log(responce);
+		  if (responce.status === 500) {
+			return responce.status;
+		  }
+	  }catch{
+		  return false
+	  }
   };
 }
