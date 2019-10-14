@@ -14,6 +14,7 @@ You will also see any lint errors in the console.
 
 to work with the application you need json server
 
+for example you can use https://github.com/typicode/json-server
+
 project is deployed on heroku: https://musical-albums-database.herokuapp.com/
 
-for example you can use https://github.com/typicode/json-server
